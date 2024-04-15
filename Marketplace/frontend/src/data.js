@@ -1,6 +1,7 @@
 const data = {
   products: [
     {
+      _id: '1',
       name: 'blue magpie bird in geomatric composition Painting',
       slug: 'blue magpie bird in geomatric composition Painting',
       category: ' Acrylic on Canvas',
@@ -14,6 +15,7 @@ const data = {
         "I try to signify my painting using the nature, but without expressing the environment 'as is' but making it an abstract artistic surface. There, showing the match as a mismatch, distorted perspective, disregard of the scale, are used as techniques to show the nature of the artistic surface in a different way, I construct the surface of the event image with various types of matching.",
     },
     {
+      _id: '2',
       name: 'Face expressionism Painting',
       slug: 'Face expressionism Painting',
       category: ' Acrylic on Canvas',
@@ -26,6 +28,7 @@ const data = {
       About: 'abstract face expression,aim to present different side of a face',
     },
     {
+      _id: '3',
       name: 'virility Painting',
       slug: 'virility Painting',
       category: ' Acrylic on Canvas',
@@ -39,6 +42,7 @@ const data = {
         'man searching his virility and who am I.butterfly means his feelings and other how react to',
     },
     {
+      _id: '4',
       name: 'To the Heavens Painting',
       slug: 'To the Heavens Painting',
       category: ' Acrylic on Canvas',
