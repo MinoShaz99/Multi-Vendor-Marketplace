@@ -33,11 +33,11 @@ const data = {
       slug: 'virility Painting',
       category: ' Acrylic on Canvas',
       image: '/images/p3.png',
-      Artist: 'Kasun Wickramasinghe',
+      Artist: 'Kasun Jayasinghe',
       price: 4270,
       countInStock: 20,
       Size: '152.4 W x 243.8 H x 5.1 D cm',
-      Shipment: 'Ships in a Tube',
+      Shipment: 'Ships in a Plane',
       About:
         'man searching his virility and who am I.butterfly means his feelings and other how react to',
     },
@@ -51,7 +51,7 @@ const data = {
       price: 1600,
       countInStock: 3,
       Size: '91.4 W x 121.9 H x 2.5 D cm',
-      Shipment: 'Ships in a Tube',
+      Shipment: 'Ships in a Airline',
       About:
         'Motivation and inspiration for the creative expression comes only from above. This thoughtful painting of a cultural dancer is a perfect portrayal of preparation before the performance. His pose sketched exquisitely from an unusual angle capturing the emotion and body language of the stance.',
     },
