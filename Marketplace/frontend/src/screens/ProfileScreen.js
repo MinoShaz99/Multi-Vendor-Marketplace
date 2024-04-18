@@ -24,11 +24,11 @@ const reducer = (state, action) => {
 export default function ProfileScreen() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { userInfo } = state;
-  const [name, setName] = useState(userInfo ? userInfo.name : ''); //occured Uncaught runtime error
-  const [email, setEmail] = useState(userInfo ? userInfo.email : '');
+  const [name, setName] = useState(userInfo ? userInfo.name : ''); // Initialize with empty string if userInfo is not available yet
+  const [email, setEmail] = useState(userInfo ? userInfo.email : ''); // Initialize with empty string if userInfo is not available yet
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  // eslint-disable-next-line
+
   const [{ loadingUpdate }, dispatch] = useReducer(reducer, {
     loadingUpdate: false,
   });

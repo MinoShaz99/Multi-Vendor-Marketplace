@@ -51,6 +51,11 @@ function reducer(state, action) {
     case 'USER_SIGNIN':
       return { ...state, userInfo: action.payload };
     case 'USER_SIGNOUT':
+      try {
+        localStorage.removeItem('cartItems');
+      } catch (error) {
+        console.error('Error removing cart items from localStorage:', error);
+      }
       return {
         ...state,
         userInfo: null,
@@ -60,6 +65,7 @@ function reducer(state, action) {
           paymentMethod: '',
         },
       };
+
     case 'SAVE_SHIPPING_ADDRESS':
       return {
         ...state,
