@@ -34,7 +34,7 @@ const data = {
       //_id: '2',
       name: 'Coin Painting',
       slug: 'Coin Painting',
-      category: ' Acrylic on Canvas',
+      category: 'Acrylic on Canvas',
       image: '/images/p2.png',
       Artist: 'Sanjaya Gunarathna',
       price: 910,

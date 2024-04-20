@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const productSchema = new mongoose.Schema(
   {
     name: { type: String, required: true, unique: true },
-    slug: { type: String, required: true },
+    slug: { type: String, required: true, unique: true },
     category: { type: String, required: true },
     image: { type: String, required: true },
     Artist: { type: String, required: true },
@@ -11,7 +11,7 @@ const productSchema = new mongoose.Schema(
     countInStock: { type: Number, required: true },
     Size: { type: String, required: true },
     Shipment: { type: String, required: true },
-    About: { type: String, required: true, unique: true },
+    About: { type: String, required: true },
   },
   {
     timestamps: true,
