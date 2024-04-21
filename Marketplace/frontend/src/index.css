@@ -110,3 +110,202 @@ main {
 .active-nav {
   left: 0;
 }
+.product-card {
+  transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+:root {
+  --primary-color: #5a5a5a;
+  --bg-color: #f5f5f5;
+}
+
+.container {
+  color: var(--primary-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+footer a {
+  color: #f8f9fa;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #adb5bd; /* Lighten the color on hover */
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer ul li a {
+  text-decoration: none;
+}
+
+footer .social-media-links a {
+  font-size: 1.5rem; /* Adjust the size of social media icons */
+}
+
+footer .social-media-links a:not(:last-child) {
+  margin-right: 10px;
+}
+
+footer .social-media-links a:hover {
+  color: #ffc107; /* Change color on hover for social icons */
+}
+
+/* Footer responsiveness */
+@media (max-width: 768px) {
+  .footer .col {
+    margin-bottom: 1rem;
+  }
+}
+
+.wallpaper-section {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.wallpaper-image {
+  width: 100%;
+  height: auto;
+}
+
+.wallpaper-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1em;
+}
+
+.wallpaper-overlay h1 {
+  font-size: 2.5em; /* Starts off large on desktop */
+  margin: 0.5em 0;
+}
+
+.wallpaper-overlay p {
+  font-size: 1em; /* Starts off standard 16px */
+  margin: 0.25em 0;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .wallpaper-overlay h1 {
+    font-size: 2em; /* Slightly smaller on tablets */
+  }
+  .wallpaper-overlay p {
+    font-size: 0.9em;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 576px) {
+  .wallpaper-overlay h1 {
+    font-size: 1.5em; /* Much smaller on phones */
+  }
+  .wallpaper-overlay p {
+    font-size: 0.8em;
+  }
+}
+.product-card {
+  background-color: #f8f9fa; /* Light gray background */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.product-price {
+  color: #007bff; /* Bootstrap primary color */
+  font-weight: bold;
+  display: block; /* Makes it a block element to add space below */
+}
+
+.product-artist {
+  color: #28a745; /* Bootstrap success color */
+  font-weight: bold;
+}
+.search-form {
+  width: 100%; /* Use full width of the container */
+}
+
+.search-input {
+  width: 80%; /* Make the input field wider */
+  font-size: 1.2em; /* Increase font size */
+  border: 2px solid #007bff; /* Stronger border with a primary color */
+}
+
+#button-search {
+  padding: 0.5rem 1rem; /* Make the button taller to match the input */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  background-color: #f4f4f8;
+}
+
+/*.container {
+   
+  max-width: 1350px;
+  margin: auto;
+  padding: 15px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+*/
+.header,
+.footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: white;
+}
+/* Responsive design elements */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 5px;
+  }
+
+  .nav-link,
+  .navbar-brand {
+    font-size: 14px;
+  }
+}

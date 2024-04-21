@@ -35,7 +35,17 @@ function Product(props) {
         <Link to={`/product/${product.slug}`}>
           <Card.Title>{product.name}</Card.Title>
         </Link>
-        <Card.Text>${product.price}</Card.Text>
+        <Card.Text>
+          <span className="product-price">
+            <i className="fas fa-tag"></i> Price: ${product.price}
+          </span>
+        </Card.Text>
+        <Card.Text>
+          <span className="product-artist">
+            <i className="fas fa-user"></i> Artist: {product.Artist}
+          </span>
+        </Card.Text>
+
         {product.countInStock === 0 ? (
           <Button variant="light" disabled>
             Out of stock
