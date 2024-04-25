@@ -28,7 +28,7 @@ export default function ProfileScreen() {
   const [email, setEmail] = useState(userInfo ? userInfo.email : ''); // Initialize with empty string if userInfo is not available yet
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-
+  // eslint-disable-next-line
   const [{ loadingUpdate }, dispatch] = useReducer(reducer, {
     loadingUpdate: false,
   });

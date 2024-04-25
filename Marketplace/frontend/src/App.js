@@ -25,6 +25,10 @@ import { getError } from './utils';
 import axios from 'axios';
 import SearchBox from './components/SearchBox';
 import Footer from './components/Footer';
+import SearchScreen from './screens/SearchScreen';
+import AboutUsScreen from './screens/AboutUsScreen';
+import { NavLink } from 'react-router-dom';
+import ContactUsPage from './screens/ContactUsPage';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -77,8 +81,50 @@ function App() {
                 <Navbar.Brand>Helabima</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
+              <Navbar.Collapse id="basic-navbar-nav ">
                 <SearchBox />
+
+                <Nav className="me-3 w-50 justify-content-end">
+                  <NavLink to="/" className="nav-link" activeClassName="active">
+                    Home
+                  </NavLink>
+                </Nav>
+
+                <Nav className="me-3 w-50 justify-content-end">
+                  <NavLink
+                    to="/search"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    Artworks
+                  </NavLink>
+                </Nav>
+
+                <Nav className="me-3 w-50 justify-content-end">
+                  <NavLink
+                    to="/aboutus"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    About Us
+                  </NavLink>
+                </Nav>
+
+                <Nav className="me-3 w-50 justify-content-end">
+                  <NavLink
+                    to="/contactus"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    Contact Us
+                  </NavLink>
+                </Nav>
+
+                <NavLink // aboutus page Join our Community Button
+                  to="/contactus"
+                  className="primary-about"
+                  activeClassName="active"
+                ></NavLink>
 
                 <Nav className="me-auto  w-100  justify-content-end">
                   <Link to="/cart" className="nav-link">
@@ -147,6 +193,9 @@ function App() {
               <Route path="/product/:slug" element={<ProductScreen />} />
               <Route path="/" element={<HomeScreen />} />
               <Route path="/cart" element={<CartScreen />} />
+              <Route path="/search" element={<SearchScreen />} />
+              <Route path="/aboutus" element={<AboutUsScreen />} />
+              <Route path="/contactus" element={<ContactUsPage />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
               <Route path="/profile" element={<ProfileScreen />} />
