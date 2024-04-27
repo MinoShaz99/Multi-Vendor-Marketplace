@@ -1,0 +1,47 @@
+/* ProductListScreen.module.css */
+.container {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.title {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.searchForm {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searchInput {
+  width: 300px;
+  margin-right: 10px;
+}
+
+.table {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.paginationItem {
+  margin: 0 5px;
+  cursor: pointer;
+  padding: 3px 6px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.paginationItem.active,
+.paginationItem:hover {
+  background-color: #0056b3;
+}
