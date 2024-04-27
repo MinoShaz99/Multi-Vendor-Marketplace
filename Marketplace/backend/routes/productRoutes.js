@@ -32,6 +32,32 @@ productRouter.post(
   })
 );
 
+productRouter.put(
+  '/:id',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const productId = req.params.id;
+    const product = await Product.findById(productId);
+    if (product) {
+      product.name = req.body.name;
+      product.slug = req.body.slug;
+      product.category = req.body.category;
+      product.price = req.body.price;
+      product.image = req.body.image;
+      product.Artist = req.body.Artist;
+      product.countInStock = req.body.countInStock;
+      product.Size = req.body.Size;
+      product.Shipment = req.body.Shipment;
+      product.About = req.body.About;
+      await product.save();
+      res.send({ message: 'Product Updated' });
+    } else {
+      res.status(404).send({ message: 'Product Not Found' });
+    }
+  })
+);
+
 const PAGE_SIZE = 3;
 
 productRouter.get(

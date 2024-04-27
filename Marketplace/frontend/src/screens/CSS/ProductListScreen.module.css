@@ -31,17 +31,3 @@
   justify-content: center;
   padding: 20px 0;
 }
-
-.paginationItem {
-  margin: 0 5px;
-  cursor: pointer;
-  padding: 3px 6px;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
-}
-
-.paginationItem.active,
-.paginationItem:hover {
-  background-color: #0056b3;
-}

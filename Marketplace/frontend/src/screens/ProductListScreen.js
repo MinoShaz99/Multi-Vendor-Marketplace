@@ -135,6 +135,7 @@ export default function ProductListScreen() {
                 <th>PRICE</th>
                 <th>CATEGORY</th>
                 <th>ARTIST</th>
+                <th>ACTIONS</th>
               </tr>
             </thead>
             <tbody>
@@ -145,22 +146,30 @@ export default function ProductListScreen() {
                   <td>{product.price}</td>
                   <td>{product.category}</td>
                   <td>{product.Artist}</td>
+                  <td>
+                    <Button
+                      type="button"
+                      variant="light"
+                      onClick={() => navigate(`/admin/product/${product._id}`)}
+                    >
+                      Edit
+                    </Button>
+                  </td>
                 </tr>
               ))}
             </tbody>
           </Table>
-          <Pagination className={styles.pagination}>
+          <div className={styles.pagination}>
             {[...Array(pages).keys()].map((x) => (
-              <Pagination.Item
+              <Link
+                className={x + 1 === Number(page) ? 'btn text-bold' : 'btn'}
                 key={x + 1}
-                active={x + 1 === Number(page)}
-                onClick={() => sp.set('page', x + 1)}
-                className={styles.paginationItem}
+                to={`/admin/products?page=${x + 1}`}
               >
                 {x + 1}
-              </Pagination.Item>
+              </Link>
             ))}
-          </Pagination>
+          </div>
         </>
       )}
     </div>
