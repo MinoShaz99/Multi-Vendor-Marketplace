@@ -1,11 +1,15 @@
 import React, { useContext, useEffect, useReducer, useState } from 'react';
 import axios from 'axios';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { toast } from 'react-toastify';
 import { Store } from '../Store';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { Button, FormControl, Table, Form, Pagination } from 'react-bootstrap';
-import styles from './CSS/ProductListScreen.module.css'; // Import your CSS module here
+import { getError } from '../utils';
+import styles from './CSS/ProductListScreen.module.css';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -21,18 +25,31 @@ const reducer = (state, action) => {
       };
     case 'FETCH_FAIL':
       return { ...state, loading: false, error: action.payload };
+
+    case 'CREATE_REQUEST':
+      return { ...state, loadingCreate: true };
+    case 'CREATE_SUCCESS':
+      return {
+        ...state,
+        loadingCreate: false,
+      };
+    case 'CREATE_FAIL':
+      return { ...state, loadingCreate: false };
+
     default:
       return state;
   }
 };
 
 export default function ProductListScreen() {
-  const [{ loading, error, products, pages }, dispatch] = useReducer(reducer, {
-    loading: true,
-    error: '',
-  });
+  const [{ loading, error, products, pages, loadingCreate }, dispatch] =
+    useReducer(reducer, {
+      loading: true,
+      error: '',
+    });
 
-  const { search, pathname } = useLocation();
+  const navigate = useNavigate();
+  const { search } = useLocation();
   const sp = new URLSearchParams(search);
   const page = sp.get('page') || 1;
   const [query, setQuery] = useState('');
@@ -58,9 +75,42 @@ export default function ProductListScreen() {
     fetchData();
   }, [page, query, userInfo]);
 
+  const createHandler = async () => {
+    if (window.confirm('Are you sure to create?')) {
+      try {
+        dispatch({ type: 'CREATE_REQUEST' });
+        const { data } = await axios.post(
+          '/api/products',
+          {},
+          {
+            headers: { Authorization: `Bearer ${userInfo.token}` },
+          }
+        );
+        toast.success('product created successfully');
+        dispatch({ type: 'CREATE_SUCCESS' });
+        navigate(`/admin/product/${data.product._id}`);
+      } catch (err) {
+        toast.error(getError(error));
+        dispatch({
+          type: 'CREATE_FAIL',
+        });
+      }
+    }
+  };
+
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Products</h1>
+      <Row>
+        <Col xs={6} md={8}>
+          <h1 className={styles.title}>Products</h1>
+        </Col>
+        <Col xs={6} md={4} className="text-md-end p-2 ">
+          <Button type="button" onClick={createHandler}>
+            Create Product
+          </Button>
+          {loadingCreate && <LoadingBox></LoadingBox>}
+        </Col>
+      </Row>
       <Form inline className={styles.searchForm}>
         <FormControl
           type="text"
@@ -84,7 +134,7 @@ export default function ProductListScreen() {
                 <th>NAME</th>
                 <th>PRICE</th>
                 <th>CATEGORY</th>
-                <th>BRAND</th>
+                <th>ARTIST</th>
               </tr>
             </thead>
             <tbody>
@@ -94,7 +144,7 @@ export default function ProductListScreen() {
                   <td>{product.name}</td>
                   <td>{product.price}</td>
                   <td>{product.category}</td>
-                  <td>{product.brand}</td>
+                  <td>{product.Artist}</td>
                 </tr>
               ))}
             </tbody>
