@@ -364,3 +364,7 @@ body {
   color: #f0ad4e; /* Use the brand color for titles */
   font-size: 1.5rem;
 }
+.Deliver {
+  background-color: #41b06e; /* Use a unique color for the primary button */
+  border-color: #31363f;
+}
