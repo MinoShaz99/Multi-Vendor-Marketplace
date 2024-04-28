@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 import { Store } from '../Store';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-import { Button, FormControl, Table, Form, Pagination } from 'react-bootstrap';
+import { Button, FormControl, Table, Form } from 'react-bootstrap';
 import { getError } from '../utils';
 import styles from './CSS/ProductListScreen.module.css';
 
@@ -61,6 +61,7 @@ export default function ProductListScreen() {
       error,
       products,
       pages,
+      // eslint-disable-next-line
       loadingCreate,
       loadingDelete,
       successDelete,

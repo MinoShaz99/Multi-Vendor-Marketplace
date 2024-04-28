@@ -31,6 +31,9 @@ app.get('/api/keys/paypal', (req, res) => {
 });
 
 //
+app.get('/api/keys/google', (req, res) => {
+  res.send({ key: process.env.GOOGLE_API_KEY || '' });
+});
 
 app.use('/api/upload', uploadRouter);
 app.use('/api/seed', seedRouter);
