@@ -81,8 +81,13 @@ function App() {
       >
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Navbar bg="dark" variant="dark" expand="lg">
-            <Container>
+          <Navbar
+            bg="dark"
+            variant="dark"
+            expand="lg"
+            className="custom-navbar"
+          >
+            <Container fluid>
               <Button
                 variant="dark"
                 onClick={() => setSidebarIsOpen(!sidebarIsOpen)}

@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 import axios from 'axios';
 import logger from 'use-reducer-logger';
 import Row from 'react-bootstrap/Row';
@@ -8,8 +8,7 @@ import Card from 'react-bootstrap/Card';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-
-// import data from '../data';
+//import data from '../data';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -25,6 +24,27 @@ const reducer = (state, action) => {
 };
 
 function HomeScreen() {
+  const wallpapers = [
+    {
+      id: 1,
+      url: '/images/wallpaper1.jpg',
+      title: 'Artistic Creation',
+      description: 'Explore unique pieces from emerging artists',
+    },
+    {
+      id: 2,
+      url: '/images/wallpaper2.jpg',
+      title: 'Contemporary Art',
+      description: 'Discover modern art trends',
+    },
+    {
+      id: 3,
+      url: '/images/wallpaper3.jpg',
+      title: 'Classic Pieces',
+      description: 'Dive into the world of classic art',
+    },
+  ];
+  const [currentWallpaperIndex, setCurrentWallpaperIndex] = useState(0);
   const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
     products: [],
     loading: true,
@@ -45,22 +65,38 @@ function HomeScreen() {
     };
     fetchData();
   }, []);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentWallpaperIndex((currentIndex) =>
+        currentIndex === wallpapers.length - 1 ? 0 : currentIndex + 1
+      );
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(timer); // Clean up the interval on component unmount
+  }, []);
+
   return (
     <div>
       <Helmet>
         <title>Helabima</title>
       </Helmet>
-      <div className="wallpaper-section">
-        <img
-          src="/images/wall.jpg"
-          alt="Artistic Wallpaper"
-          className="wallpaper-image"
-        />
-        <div className="wallpaper-overlay">
-          <h1>Explore Artistic Creations</h1>
-          <p>Find unique pieces from emerging artists around the world</p>
-        </div>
+      <div className="wallpaper-carousel">
+        {wallpapers.map((wallpaper, index) => (
+          <div
+            key={wallpaper.id}
+            className={`wallpaper-item ${
+              index === currentWallpaperIndex ? 'active' : ''
+            }`}
+            style={{ backgroundImage: `url(${wallpaper.url})` }}
+          >
+            <div className="wallpaper-info">
+              <h1>{wallpaper.title}</h1>
+              <p>{wallpaper.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
+
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (
