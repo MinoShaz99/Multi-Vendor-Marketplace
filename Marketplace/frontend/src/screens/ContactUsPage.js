@@ -45,13 +45,13 @@ const ContactUsPage = () => {
             <Card className="p-3">
               <Card.Title className="contactI">Contact Information</Card.Title>
               <p>
-                Email: support@example.com
+                Email: support@ceylonartclub.com
                 <br />
-                Phone: +123 456 7890
+                Phone: +9476 380 4022
                 <br />
-                Address: 1234 Street, City, Country
+                Address: Main Street, Colombo, Sri Lanka
               </p>
-              <Card.Title className="contactI">Follow Us</Card.Title>
+              <Card.Title className="contactI">Contact Via </Card.Title>
             </Card>
           </Col>
         </Row>

@@ -143,7 +143,7 @@ orderRouter.put(
         .messages()
         .send(
           {
-            from: 'SERENDIB <SERENDIB@mg.yourdomain.com>',
+            from: 'CEYLON ART CLUB <CEYLONARTCLUB@Official.com>',
             to: `${order.user.name} <${order.user.email}>`,
             subject: `New order ${order._id}`,
             html: payOrderEmailTemplate(order),
