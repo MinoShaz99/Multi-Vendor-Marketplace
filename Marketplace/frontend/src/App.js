@@ -38,6 +38,7 @@ import OrderListScreen from './screens/OrderListScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import MapScreen from './screens/MapScreen';
+import SellerPage from './screens/SellerPage';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -87,52 +88,55 @@ function App() {
             expand="lg"
             className="custom-navbar"
           >
-            <Container fluid>
+            <Container>
               <Button
                 variant="dark"
                 onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
               >
                 <i className="fas fa-bars"></i>
               </Button>
-
               <LinkContainer to="/">
-                <Navbar.Brand>Helabima</Navbar.Brand>
+                <Navbar.Brand>Ceylon Art Club</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav ">
+              <Navbar.Collapse id="basic-navbar-nav">
                 <SearchBox />
-
                 <Nav className="me-3 w-50 justify-content-end">
-                  <NavLink to="/" className="nav-link" activeClassName="active">
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      isActive ? 'nav-link active' : 'nav-link'
+                    }
+                  >
                     Home
                   </NavLink>
                 </Nav>
-
                 <Nav className="me-3 w-50 justify-content-end">
                   <NavLink
                     to="/search"
-                    className="nav-link"
-                    activeClassName="active"
+                    className={({ isActive }) =>
+                      isActive ? 'nav-link active' : 'nav-link'
+                    }
                   >
                     Artworks
                   </NavLink>
                 </Nav>
-
                 <Nav className="me-3 w-50 justify-content-end">
                   <NavLink
                     to="/aboutus"
-                    className="nav-link"
-                    activeClassName="active"
+                    className={({ isActive }) =>
+                      isActive ? 'nav-link active' : 'nav-link'
+                    }
                   >
                     About Us
                   </NavLink>
                 </Nav>
-
                 <Nav className="me-3 w-50 justify-content-end">
                   <NavLink
                     to="/contactus"
-                    className="nav-link"
-                    activeClassName="active"
+                    className={({ isActive }) =>
+                      isActive ? 'nav-link active' : 'nav-link'
+                    }
                   >
                     Contact Us
                   </NavLink>
@@ -160,6 +164,10 @@ function App() {
                       </LinkContainer>
                       <LinkContainer to="/orderhistory">
                         <NavDropdown.Item>Order History</NavDropdown.Item>
+                      </LinkContainer>
+                      <NavDropdown.Divider />
+                      <LinkContainer to="/sellerpage">
+                        <NavDropdown.Item>Join as a Seller</NavDropdown.Item>
                       </LinkContainer>
                       <NavDropdown.Divider />
                       <Link
@@ -264,6 +272,14 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <OrderHistoryScreen />
+                  </ProtectedRoute>
+                }
+              ></Route>
+              <Route
+                path="/sellerpage"
+                element={
+                  <ProtectedRoute>
+                    <SellerPage />
                   </ProtectedRoute>
                 }
               ></Route>

@@ -111,11 +111,11 @@ main {
   left: 0;
 }
 .product-card {
-  transition: transform 0.2s; /* Animation for hover effect */
+  transition: transform 0.2s;
 }
 
 .product-card:hover {
-  transform: scale(1.05); /* Slightly scale up on hover */
+  transform: scale(1.05);
 }
 
 body {
@@ -155,7 +155,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #adb5bd; /* Lighten the color on hover */
+  color: #adb5bd;
 }
 
 footer ul {
@@ -167,7 +167,7 @@ footer ul li a {
 }
 
 footer .social-media-links a {
-  font-size: 1.5rem; /* Adjust the size of social media icons */
+  font-size: 1.5rem;
 }
 
 footer .social-media-links a:not(:last-child) {
@@ -175,7 +175,7 @@ footer .social-media-links a:not(:last-child) {
 }
 
 footer .social-media-links a:hover {
-  color: #ffc107; /* Change color on hover for social icons */
+  color: #ffc107;
 }
 
 /* Footer responsiveness */
@@ -234,35 +234,35 @@ footer .social-media-links a:hover {
   }
 }
 .product-card {
-  background-color: #f8f9fa; /* Light gray background */
-  border: 1px solid #ddd; /* Light gray border */
-  border-radius: 8px; /* Rounded corners */
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   padding: 15px;
   margin-top: 10px;
 }
 
 .product-price {
-  color: #007bff; /* Bootstrap primary color */
+  color: #007bff;
   font-weight: bold;
-  display: block; /* Makes it a block element to add space below */
+  display: block;
 }
 
 .product-artist {
-  color: #28a745; /* Bootstrap success color */
+  color: #28a745;
   font-weight: bold;
 }
 .search-form {
-  width: 100%; /* Use full width of the container */
+  width: 100%;
 }
 
 .search-input {
-  width: 80%; /* Make the input field wider */
-  font-size: 1.2em; /* Increase font size */
-  border: 2px solid #007bff; /* Stronger border with a primary color */
+  width: 80%;
+  font-size: 1.2em;
+  border: 2px solid #007bff;
 }
 
 #button-search {
-  padding: 0.5rem 1rem; /* Make the button taller to match the input */
+  padding: 0.5rem 1rem;
 }
 
 body {
@@ -310,62 +310,61 @@ body {
   }
 }
 .contact-page {
-  /* Sets the font and color for the entire contact page */
   font-family: 'Arial', sans-serif;
 }
 
 .contact-hero-section {
-  background-color: #3d80cc; /* Light pink background */
-  color: #333; /* Dark text for contrast */
+  background-color: #3d80cc;
+  color: #333;
 }
 
 .contact-hero-section h1 {
   margin-bottom: 0.5rem;
-  font-size: 2.5rem; /* Larger font size for the heading */
+  font-size: 2.5rem;
 }
 
 .contact-hero-section p {
   margin-bottom: 1rem;
-  font-size: 1.2rem; /* Slightly larger font size for the subtext */
+  font-size: 1.2rem;
 }
 
 /* Style the Form elements */
 .form-label {
-  color: #555; /* Dark grey color for the form labels */
+  color: #555;
 }
 
 .form-control {
-  border-radius: 0; /* Square edges for form inputs */
-  border: 2px solid #ddd; /* Slightly thicker border with a soft color */
+  border-radius: 0;
+  border: 2px solid #ddd;
 }
 
 .form-control:focus {
-  border-color: #f0ad4e; /* Highlight color when focused */
-  box-shadow: none; /* Remove the default Bootstrap shadow */
+  border-color: #f0ad4e;
+  box-shadow: none;
 }
 
 .btn-primary-about {
-  background-color: #f0ad4e; /* Use a unique color for the primary button */
+  background-color: #f0ad4e;
   border: none;
 }
 
 .btn-primary-about.btn-primary-about,
 .btn-primary-about:focus {
-  background-color: #eb9c2d; /* Darker shade for hover/focus */
+  background-color: #eb9c2d;
 }
 
 /* Style the Contact Information Card */
 .card {
-  background-color: #fff; /* White background for the card */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .Artistname {
-  color: #f0ad4e; /* Use the brand color for titles */
+  color: #f0ad4e;
   font-size: 1.5rem;
 }
 .Deliver {
-  background-color: #41b06e; /* Use a unique color for the primary button */
+  background-color: #41b06e;
   border-color: #31363f;
 }
 
@@ -413,7 +412,7 @@ button.thumbnail {
 }
 .custom-navbar .navbar-collapse {
   display: flex;
-  justify-content: space-between; /* Ensures space is distributed */
+  justify-content: space-between;
 }
 .wallpaper-carousel {
   position: relative;

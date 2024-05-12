@@ -117,7 +117,7 @@ productRouter.get(
   isAuth,
   isAdmin,
   expressAsyncHandler(async (req, res) => {
-    const pageSize = 10; // Or whatever page size you prefer
+    const pageSize = 10;
     const page = parseInt(req.query.page) || 1;
     const query = req.query.query || '';
 

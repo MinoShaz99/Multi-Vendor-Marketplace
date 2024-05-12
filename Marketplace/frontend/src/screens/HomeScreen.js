@@ -78,7 +78,7 @@ function HomeScreen() {
   return (
     <div>
       <Helmet>
-        <title>Helabima</title>
+        <title>Ceylon Art Club</title>
       </Helmet>
       <div className="wallpaper-carousel">
         {wallpapers.map((wallpaper, index) => (

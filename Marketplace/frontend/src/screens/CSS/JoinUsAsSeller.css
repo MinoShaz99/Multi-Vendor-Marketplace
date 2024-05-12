@@ -1,0 +1,55 @@
+.seller-custom-card {
+  width: 50rem;
+  padding: 1rem;
+  background-color: #bed7dc;
+  border: border-5;
+  margin-top: 0%;
+  margin-bottom: 2%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.icon-img {
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon-img:hover {
+  transform: scale(1.1);
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #5c67f2;
+  box-shadow: none;
+}
+
+.btn-primary-seller {
+  background-color: #f0ad4e;
+  border: none;
+  color: #ffffff;
+}
+
+.btn-primary-seller {
+  background-color: #ffaf45;
+}
+
+.custom-submit-btn {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.custom-submit-btn:hover {
+  background-color: darken(#f0ad4e, 10%);
+}
