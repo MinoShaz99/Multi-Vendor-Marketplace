@@ -13,7 +13,7 @@ const Footer = () => {
       <Container>
         <Row>
           <Col sm={6} md={3}>
-            <h5>About Helabima</h5>
+            <h5>About Ceylon Art Club</h5>
             <p>
               Discover the world's art online. We offer an unparalleled
               selection of paintings, drawings, sculpture, and photography in
@@ -58,25 +58,25 @@ const Footer = () => {
             <h5>Follow Us</h5>
             <div className="social-media-links">
               <a
-                href="https://www.facebook.com/helabima"
+                href="https://www.facebook.com/ceylonartclub"
                 className="text-light me-2"
               >
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
               <a
-                href="https://twitter.com/helabima"
+                href="https://twitter.com/ceylonartclub"
                 className="text-light me-2"
               >
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
               <a
-                href="https://instagram.com/helabima"
+                href="https://instagram.com/ceylonartclub"
                 className="text-light me-2"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a
-                href="https://linkedin.com/company/helabima"
+                href="https://linkedin.com/company/ceylonartclub"
                 className="text-light"
               >
                 <FontAwesomeIcon icon={faLinkedinIn} />
@@ -87,8 +87,7 @@ const Footer = () => {
         <Row className="mt-3">
           <Col className="text-center">
             <small>
-              © {new Date().getFullYear()} Helabima Art Gallery. All Rights
-              Reserved.
+              © {new Date().getFullYear()} Ceylon Art Club. All Rights Reserved.
             </small>
           </Col>
         </Row>

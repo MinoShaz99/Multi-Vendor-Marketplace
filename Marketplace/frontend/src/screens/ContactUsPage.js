@@ -52,14 +52,10 @@ const ContactUsPage = () => {
                 Address: 1234 Street, City, Country
               </p>
               <Card.Title className="contactI">Follow Us</Card.Title>
-              {/* Social media icons or links */}
             </Card>
           </Col>
         </Row>
       </Container>
-
-      {/* FAQ Section */}
-      {/* Optional: Include only if you have a FAQ to display */}
     </div>
   );
 };

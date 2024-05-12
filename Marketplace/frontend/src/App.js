@@ -148,7 +148,7 @@ function App() {
                   activeClassName="active"
                 ></NavLink>
 
-                <Nav className="me-auto  w-100  justify-content-end">
+                <Nav className="me-auto  w-100  justify-content-end ">
                   <Link to="/cart" className="nav-link">
                     Cart
                     {cart.cartItems.length > 0 && (
@@ -158,7 +158,7 @@ function App() {
                     )}
                   </Link>
                   {userInfo ? (
-                    <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
+                    <NavDropdown title={userInfo.name} id="basic-nav-dropdown ">
                       <LinkContainer to="/profile">
                         <NavDropdown.Item>User Profile</NavDropdown.Item>
                       </LinkContainer>

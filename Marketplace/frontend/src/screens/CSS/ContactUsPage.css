@@ -1,57 +1,53 @@
 .contact-page {
-  /* Sets the font and color for the entire contact page */
   font-family: 'Arial', sans-serif;
 }
 
 .contact-hero-section {
-  background-color: #6cb4ee; /* Light pink background */
-  color: #333; /* Dark text for contrast */
+  background-color: #6cb4ee;
+  color: #333;
 }
 
 .contact-hero-section h1 {
   margin-bottom: 0.5rem;
-  font-size: 2.5rem; /* Larger font size for the heading */
+  font-size: 2.5rem;
 }
 
 .contact-hero-section p {
   margin-bottom: 1rem;
-  font-size: 1.2rem; /* Slightly larger font size for the subtext */
+  font-size: 1.2rem;
 }
 
-/* Style the Form elements */
 .form-label {
-  color: #555; /* Dark grey color for the form labels */
+  color: #555;
 }
 
 .form-control {
-  border-radius: 0; /* Square edges for form inputs */
-  border: 2px solid #ddd; /* Slightly thicker border with a soft color */
+  border-radius: 0;
+  border: 2px solid #ddd;
 }
 
 .form-control:focus {
-  border-color: #f0ad4e; /* Highlight color when focused */
-  box-shadow: none; /* Remove the default Bootstrap shadow */
+  border-color: #f0ad4e;
+  box-shadow: none;
 }
 
 .btn-primary-contactus {
-  background-color: #f0ad4e; /* Use a unique color for the primary button */
+  background-color: #f0ad4e;
   border: none;
 }
 
 .btn-primary-contactus:hover,
 .btn-primary-contactus:focus {
-  background-color: #eb9c2d; /* Darker shade for hover/focus */
+  background-color: #eb9c2d;
 }
 
 /* Style the Contact Information Card */
 .card {
-  background-color: #fff; /* White background for the card */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contactI {
-  color: #191d88; /* Use the brand color for titles */
+  color: #191d88;
   font-size: 1.5rem;
 }
-
-/* Add more custom styles as needed */

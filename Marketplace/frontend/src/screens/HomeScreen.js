@@ -72,8 +72,8 @@ function HomeScreen() {
       );
     }, 5000); // Change image every 5 seconds
 
-    return () => clearInterval(timer); // Clean up the interval on component unmount
-  }, []);
+    return () => clearInterval(timer);
+  });
 
   return (
     <div>

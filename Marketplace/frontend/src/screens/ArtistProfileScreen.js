@@ -18,7 +18,7 @@ function ArtistProfile() {
   }, [artistId]);
 
   const handleRatingChange = (newRating) => {
-    // Here, send the new rating to the server to update
+    //end the new rating to the server to update
     console.log(`New rating for artist is: ${newRating}`);
   };
 

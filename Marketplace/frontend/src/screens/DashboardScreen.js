@@ -8,7 +8,7 @@ import MessageBox from '../components/MessageBox';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import './CSS/DashboardScreen.css'; // Ensure you have this CSS file in your project
+import './CSS/DashboardScreen.css';
 
 const reducer = (state, action) => {
   switch (action.type) {

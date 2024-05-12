@@ -121,7 +121,6 @@ productRouter.get(
     const page = parseInt(req.query.page) || 1;
     const query = req.query.query || '';
 
-    // Build the query object based on the search term
     const searchCondition = query
       ? {
           name: { $regex: query, $options: 'i' }, // 'i' for case-insensitive
